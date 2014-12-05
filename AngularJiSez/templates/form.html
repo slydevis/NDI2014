@@ -22,12 +22,31 @@
   </div>
 </div>
 
-<!-- Text input-->
+<!-- Password input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Sex">Sex</label>  
+  <label class="col-md-4 control-label" for="Password">Password</label>
   <div class="col-md-4">
-  <input id="Sex" name="Sex" type="text" placeholder="" class="form-control input-md" required="">
+    <input id="Password" name="Password" type="password" placeholder="" class="form-control input-md">
     
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Sex">Sex</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="Sex-0">
+      <input type="radio" name="Sex" id="Sex-0" value="1" checked="checked">
+      Male
+    </label>
+	</div>
+  <div class="radio">
+    <label for="Sex-1">
+      <input type="radio" name="Sex" id="Sex-1" value="2">
+      Female
+    </label>
+	</div>
   </div>
 </div>
 
@@ -37,8 +56,7 @@
   <div class="col-md-4">
     <select id="Status" name="Status" class="form-control">
       <option value="1">Patient</option>
-      <option value="2">Doctor</option>
-      <option value="3">Admin</option>
+      <option value="2">Medical staff</option>
     </select>
   </div>
 </div>
@@ -80,6 +98,24 @@
 
 <!-- Text input-->
 <div class="form-group">
+  <label class="col-md-4 control-label" for="Zipcode">Zipcode</label>  
+  <div class="col-md-4">
+  <input id="Zipcode" name="Zipcode" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Camp">Camp</label>  
+  <div class="col-md-4">
+  <input id="Camp" name="Camp" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
   <label class="col-md-4 control-label" for="Profession">Profession</label>  
   <div class="col-md-4">
   <input id="Profession" name="Profession" type="text" placeholder="" class="form-control input-md">
@@ -94,7 +130,91 @@
     <select id="Relationship status" name="Relationship status" class="form-control">
       <option value="1">Single</option>
       <option value="2">Married</option>
+      <option value="3">Divorced</option>
+      <option value="4">Widow(er)</option>
     </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Height">Height</label>  
+  <div class="col-md-4">
+  <input id="Height" name="Height" type="text" placeholder="" class="form-control input-md">
+  <span class="help-block">In cm</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Weight">Weight</label>  
+  <div class="col-md-4">
+  <input id="Weight" name="Weight" type="text" placeholder="" class="form-control input-md">
+  <span class="help-block">in Kg</span>  
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Blood type">Blood type</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="Blood type-0">
+      <input type="radio" name="Blood type" id="Blood type-0" value="1" checked="checked">
+      A+
+    </label> 
+    <label class="radio-inline" for="Blood type-1">
+      <input type="radio" name="Blood type" id="Blood type-1" value="2">
+      A-
+    </label> 
+    <label class="radio-inline" for="Blood type-2">
+      <input type="radio" name="Blood type" id="Blood type-2" value="3">
+      B+
+    </label> 
+    <label class="radio-inline" for="Blood type-3">
+      <input type="radio" name="Blood type" id="Blood type-3" value="4">
+      B-
+    </label> 
+    <label class="radio-inline" for="Blood type-4">
+      <input type="radio" name="Blood type" id="Blood type-4" value="5">
+      AB+
+    </label> 
+    <label class="radio-inline" for="Blood type-5">
+      <input type="radio" name="Blood type" id="Blood type-5" value="6">
+      AB-
+    </label> 
+    <label class="radio-inline" for="Blood type-6">
+      <input type="radio" name="Blood type" id="Blood type-6" value="7">
+      O+
+    </label> 
+    <label class="radio-inline" for="Blood type-7">
+      <input type="radio" name="Blood type" id="Blood type-7" value="8">
+      O-
+    </label>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Medical staff responsible">Medical staff responsible</label>  
+  <div class="col-md-4">
+  <input id="Medical staff responsible" name="Medical staff responsible" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Specify location">Specify location</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="Specify location" name="Specify location"></textarea>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Condition">Condition</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="Condition" name="Condition"></textarea>
   </div>
 </div>
 
