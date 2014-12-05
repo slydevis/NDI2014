@@ -19,7 +19,7 @@ HealthCare.controller('CarouselDemoCtrl', function ($scope) {
   }
 })
 
-.controller('AccessCtrl', function($scope, $q, $state, UserBase, Stock){
+.controller('FormCtrl', function($scope, $q, $state, UserBase, Stock){
   $scope.data = {
     user: Stock.get('user'),
     saving: false,
@@ -27,24 +27,9 @@ HealthCare.controller('CarouselDemoCtrl', function ($scope) {
   
   $scope.save = function(profile){
     $scope.data.saving = true;
-    $q.all([idPromise, emailPromise, positionPromise]).then(function(results){
-      var user = StorageSrv.get('user') || {};
+      var user = Stock.get('user') || {};
       if(!user.created){user.created = Date.now();}
-      user.lastSeen = Date.now();
       user.id = results[0];
-      user.email = results[1];
       user.profile = profile;
-      if(user.profile){user.profile.updated = Date.now();}
-      user.position = results[2].coords;
-      if(user.position){user.position.updated = Date.now();}
-      UserSrv.save(user).then(function(){
-        StorageSrv.set('user', user);
-        $state.go('tab.access');
-      });
-    }, function(err){
-      $scope.data.saving = false;
-      PluginsSrv.showToast('Impossible de sauvegarder le profil :(');
-    });
-  };
-  
-})
+      }
+});
