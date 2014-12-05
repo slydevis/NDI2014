@@ -17,4 +17,19 @@ HealthCare.controller('CarouselDemoCtrl', function ($scope) {
   for (var i=0; i<4; i++) {
     $scope.addSlide();
   }
+})
+
+.controller('FormCtrl', function($scope, $q, $state, UserBase, Stock){
+  $scope.data = {
+    user: Stock.get('user'),
+    saving: false,
+  };
+  
+  $scope.save = function(profile){
+    $scope.data.saving = true;
+      var user = Stock.get('user') || {};
+      if(!user.created){user.created = Date.now();}
+      user.id = results[0];
+      user.profile = profile;
+      }
 });
