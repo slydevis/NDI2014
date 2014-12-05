@@ -1,44 +1,102 @@
-<div style="padding: 70px;">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <form class="navbar-form navbar-right form-inline" role="form">
-            <div class="form-group">
-            <div class="input-group">
-            <label class="sr-only" for="exampleInputEmail2">Email address</label>
-            <div class="input-group-addon">@</div>
-            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-            </div>
-            </div>
-            <div class="form-group">
-            <label class="sr-only" for="exampleInputPassword2">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-default" value="move out">Sign in</button>
-       </form>
-    </nav>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="jumbotron">
-            <div class="container">
-            <h1>Health Care</h1>
-            <p>Welcome on the site who take care of you</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div ng-controller="CarouselDemoCtrl">
-                <div style="height: 305px">
-                    <carousel interval="myInterval">
-                    <slide ng-repeat="slide in slides" active="slide.active">
-                    <img ng-src="{{slide.image}}" style="margin:auto;">
-                    <div class="carousel-caption">
-                    <h4>Slide {{$index}}</h4>
-                    <p>{{slide.text}}</p>
-            </div>
-        </slide>
-        </carousel>
-        </div>
-        </div>
-    </div>
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Form</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Lastname">Lastname</label>  
+  <div class="col-md-4">
+  <input id="Lastname" name="Lastname" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
 </div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Firstname">Firstname</label>  
+  <div class="col-md-4">
+  <input id="Firstname" name="Firstname" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
 </div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Sex">Sex</label>  
+  <div class="col-md-4">
+  <input id="Sex" name="Sex" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Status">Status</label>
+  <div class="col-md-4">
+    <select id="Status" name="Status" class="form-control">
+      <option value="1">Patient</option>
+      <option value="2">Doctor</option>
+      <option value="3">Admin</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Date of birth">Date of birth</label>  
+  <div class="col-md-4">
+  <input id="Date of birth" name="Date of birth" type="text" placeholder="DD/MM/YYYY" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Address">Address</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="Address" name="Address"></textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="City">City</label>  
+  <div class="col-md-4">
+  <input id="City" name="City" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Country">Country</label>  
+  <div class="col-md-4">
+  <input id="Country" name="Country" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Profession">Profession</label>  
+  <div class="col-md-4">
+  <input id="Profession" name="Profession" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Relationship status">Relationship status</label>
+  <div class="col-md-4">
+    <select id="Relationship status" name="Relationship status" class="form-control">
+      <option value="1">Single</option>
+      <option value="2">Married</option>
+    </select>
+  </div>
+</div>
+
+</fieldset>
+</form>
